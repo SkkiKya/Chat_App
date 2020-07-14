@@ -12,33 +12,24 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <div class="container">
-    <ul class="messages">
-      <li class="left-side">
-        <div class="pic">
-          <img src="img/cat.png">
-        </div>
-        <div class="text">
-          こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。こんにちは。
-        </div>
-      </li>
-      <li class="right-side">
-        <div class="pic">
-          <img src="img/dog.png">
-        </div>
-        <div class="text">
-          お久しぶりです！
-        </div>
-      </li>
-      <li class="left-side">
-        <div class="pic">
-          <img src="img/cat.png">
-        </div>
-        <div class="text">
-          こんにちは。こんにちは。
-        </div>
-      </li>
-    </ul>
+  <div id="app">
+    <form action="" class="add-form" @submit.prevent="add">
+      <!-- message -->
+      <input type="text" name="chat" ref="message">
+      <!-- button -->
+      <button type="button" class="done" @click="send_message">送信</button>
+    </form>
+  
+    <!-- フォーム -->
+    <div class="container">
+      <ul class="messages" v-for="item in list">
+    <li>
+      {{item.message}}
+    </li>
+      </ul>
+    </div>
   </div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

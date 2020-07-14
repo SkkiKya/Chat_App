@@ -66,3 +66,7 @@ li.right-side {
   right: -16px;
   border-left-color: #fff;
 }
+
+.done {
+  cursor: pointer;
+}
