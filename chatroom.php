@@ -23,9 +23,14 @@
     <!-- フォーム -->
     <div class="container">
       <ul class="messages" v-for="item in list">
-    <li>
-      {{item.message}}
-    </li>
+    <li class="left-side">
+        <div class="pic">
+          <img src="img/cat.png">
+        </div>
+        <div class="text">
+        {{item.message}}
+        </div>
+      </li>
       </ul>
     </div>
   </div>
